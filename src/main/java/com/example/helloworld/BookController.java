@@ -3,6 +3,7 @@ package com.example.helloworld;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -14,10 +15,14 @@ public class BookController {
 
     @RequestMapping(value="/doAdd", method = RequestMethod.POST)
     @ResponseBody
-    public void doAdd(String name, String author, Double price, Boolean ispublic) {
-        System.out.println(name);
-        System.out.println(author);
-        System.out.println(price);
-        System.out.println(ispublic);
+    public void doAdd(Book book) {
+        System.out.println(book);
     }
+//    public void doAdd(@RequestParam(value="name", required = true, defaultValue = "Default Book") String bookname, String author, Double price, Boolean ispublic) {
+//        // The field name in the form should be the same with the parameter here except using @RequestParam
+//        System.out.println(bookname);
+//        System.out.println(author);
+//        System.out.println(price);
+//        System.out.println(ispublic);
+//    }
 }

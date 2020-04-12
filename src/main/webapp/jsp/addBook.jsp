@@ -18,8 +18,12 @@
             <td><input type="text" name="name"></td>
         </tr>
         <tr>
-            <td>Author:</td>
-            <td><input type="text" name="author"></td>
+            <td>Author Name:</td>
+            <td><input type="text" name="author.name"></td>
+        </tr>
+        <tr>
+            <td>Author Age:</td>
+            <td><input type="text" name="author.age"></td>
         </tr>
         <tr>
             <td>Price:</td>
@@ -28,8 +32,12 @@
         <tr>
             <td>If public:</td>
             <td><input type="radio" value="true" name="ispublic">Yes
-                <input type="radio" value="true" name="ispublic">No
+                <input type="radio" value="false" name="ispublic">No
             </td>
+        </tr>
+        <tr>
+            <td>Release Data:</td>
+            <td><input type="text" name="date"></td>
         </tr>
         <tr>
             <td colspan="2">
@@ -39,5 +47,4 @@
     </table>
 </form>
 </body>
-
 </html>
