@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Arrays;
+
 @Controller
 public class BookController {
     @RequestMapping("/book")
@@ -15,7 +17,8 @@ public class BookController {
 
     @RequestMapping(value="/doAdd", method = RequestMethod.POST)
     @ResponseBody
-    public void doAdd(Book book) {
+    public void doAdd(Book book, String[] hobbies) {
+        System.out.println(Arrays.toString(hobbies));
         System.out.println(book);
     }
 //    public void doAdd(@RequestParam(value="name", required = true, defaultValue = "Default Book") String bookname, String author, Double price, Boolean ispublic) {

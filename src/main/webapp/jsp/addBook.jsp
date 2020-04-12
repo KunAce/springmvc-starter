@@ -26,6 +26,14 @@
             <td><input type="text" name="author.age"></td>
         </tr>
         <tr>
+            <td>Hobbies:</td>
+            <td>
+                <input type="checkbox" name = "hobbies" value="Soccer">Soccer
+                <input type="checkbox" name = "hobbies" value="Basketball">Basketball
+                <input type="checkbox" name = "hobbies" value="PingPong">PingPong
+            </td>
+        </tr>
+        <tr>
             <td>Price:</td>
             <td><input type="text" name="price"></td>
         </tr>
