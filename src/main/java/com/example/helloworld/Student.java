@@ -6,14 +6,14 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class Student {
-    @NotNull(message = "{student.id.notnull}")
+    @NotNull(message = "{student.id.notnull}", groups = validationGroup1.class)
     private Integer id;
-    @NotNull(message = "{student.name.notnull}")
-    @Size(min = 2, max = 10, message = "{student.name.length}")
+    @NotNull(message = "{student.name.notnull}", groups = {validationGroup1.class, validationGroup2.class})
+    @Size(min = 2, max = 10, message = "{student.name.length}", groups = {validationGroup1.class, validationGroup2.class})
     private String name;
-    @Email(message = "{student.email.error}")
+    @Email(message = "{student.email.error}",groups = {validationGroup1.class,validationGroup2.class})
     private String email;
-    @Max(value = 150, message = "{student.age.error}")
+    @Max(value = 150, message = "{student.age.error}", groups = {validationGroup2.class})
     private Integer age;
 
     public String getEmail(){

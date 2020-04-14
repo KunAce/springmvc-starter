@@ -18,7 +18,7 @@ public class StudentController {
 
     @RequestMapping("/doAddStudent")
     @ResponseBody
-    public void addStudent(@Validated Student student, BindingResult result) {
+    public void addStudent(@Validated(validationGroup2.class) Student student, BindingResult result) {
         if (result != null) {
             //Fail the validation.Get the exception information
             List<ObjectError> allErrors = result.getAllErrors();
