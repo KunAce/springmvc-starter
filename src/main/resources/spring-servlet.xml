@@ -62,4 +62,23 @@
         <property name="cacheSeconds" value="300"/>
     </bean>
     <mvc:annotation-driven validator="validatorFactoryBean" />
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <ref bean="httpMessageConverter" />
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" id="httpMessageConverter">
+        <property name="objectMapper">
+            <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+                <property name="dateFormat">
+                    <bean class="java.text.SimpleDateFormat">
+                        <constructor-arg name="pattern" value="yyyy-MM-dd HH:mm:ss"/>
+                    </bean>
+                </property>
+                <property name="timeZone" value="America/Los_Angeles" />
+            </bean>
+        </property>
+    </bean>
+
+
 </beans>
