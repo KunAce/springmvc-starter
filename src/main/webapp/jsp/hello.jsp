@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Hello ${name}!</h1>
+<h1>Hello ${stu.name}!</h1>
+<%--<h2>${info.username} ${info.address}</h2>--%>
 </body>
 </html>

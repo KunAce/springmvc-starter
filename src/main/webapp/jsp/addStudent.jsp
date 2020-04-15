@@ -15,19 +15,19 @@
     <table>
         <tr>
             <td>Student ID:</td>
-            <td><input type="text" name="id"></td>
+            <td><input type="text" name="id" value="${stu.id}"></td>
         </tr>
         <tr>
             <td>Student Name:</td>
-            <td><input type="text" name="name"></td>
+            <td><input type="text" name="name" value="${stu.name}"></td>
         </tr>
         <tr>
             <td>Email:</td>
-            <td><input type="text" name="email"></td>
+            <td><input type="text" name="email" value="${stu.email}"></td>
         </tr>
         <tr>
             <td>Age:</td>
-            <td><input type="text" name="age"></td>
+            <td><input type="text" name="age" value="${stu.age}"></td>
         </tr>
         <tr>
             <td colspan="2">
