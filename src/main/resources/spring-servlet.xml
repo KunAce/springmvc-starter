@@ -80,5 +80,14 @@
         </property>
     </bean>
 
-
+<!--    <mvc:interceptors>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/**"/>-->
+<!--            <ref bean="myInterceptor1"/>-->
+<!--        </mvc:interceptor>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/**"/>-->
+<!--            <ref bean="myInterceptor2"/>-->
+<!--        </mvc:interceptor>-->
+<!--    </mvc:interceptors>-->
 </beans>
